@@ -1,0 +1,152 @@
+/* scroll bar styles (webkit only)*/
+
+/* ::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+} */
+
+:root.light {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+/* moz */
+@supports (scrollbar-width: thin) {
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+hr {
+  pointer-events: none;
+  @apply border-divider;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html,
+body,
+#__nuxt,
+#__nuxt > #__layout {
+  height: 100%;
+}
+
+img,
+svg {
+  user-select: none;
+}
+
+input,
+select,
+textarea,
+button,
+[role='button'] {
+  font-size: 16px;
+}
+
+#unbug-qa body,
+#unbug-qa button,
+#unbug-qa {
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, San Francisco,
+    Segoe UI, Roboto, Helvetica Neue, sans-serif;
+}
+
+/* To size icons with font-size */
+#unbug-qa .size-icon .Polaris-Icon__Img,
+#unbug-qa .size-icon .Polaris-Icon__Svg {
+  width: 1em;
+  max-width: 1em;
+  max-height: 1em;
+  height: 1em;
+}
+
+/* To size icons with font-size */
+#unbug-qa .size-icon.Polaris-Icon {
+  width: 1em;
+  height: 1em;
+}
+
+/* to fill icons with currentColor */
+#unbug-qa .fill-icon .Polaris-Button svg,
+#unbug-qa .fill-icon .Polaris-Icon__Svg {
+  fill: currentColor;
+}
+
+.Polaris-Choice__Label {
+  cursor: pointer;
+}
+
+/* set to 1ms incase any element requires to listen for an animationend or transitionend event */
+@media (prefers-reduced-motion) {
+  #unbug-qa *,
+  #unbug-qa *::before,
+  #unbug-qa *::after {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+  }
+}
+
+/* reset Polaris divider */
+
+#unbug-qa .Polaris-HorizontalDivider {
+  background-color: #f7f7f7;
+}
+
+*::selection {
+  background-color: #267dff;
+  color: #fff;
+}
+
+.plain-upload .Polaris-DropZone--sizeLarge,
+.plain-upload .Polaris-DropZone--sizeExtraLarge {
+  min-height: 11rem;
+}
+
+#unbug-qa
+  .plain-upload
+  .Polaris-DropZone-FileUpload
+  .Polaris-Stack__Item:first-of-type {
+  display: none;
+}
+
+#unbug-qa[data-lock-html-scroll] {
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+}
+
+#unbug-qa .plain-upload .Polaris-Stack__Item {
+  margin-top: 0;
+}
+
+.plain-upload .Polaris-DropZone-FileUpload__Button {
+  border: none;
+  box-shadow: none;
+  min-height: auto;
+  padding: 0;
+  background: inherit;
+  @apply text-interactive-default text-body mb-10;
+}
+
+.Polaris-Frame-ToastManager.Polaris-Frame-Toast--Position-bottom,
+.Polaris-Frame-ToastManager.Polaris-Frame-Toast--Position-top {
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.125) !important;
+  animation-duration: 350ms !important;
+}
+
+.Polaris-ButtonGroup--segmented .Polaris-Button.show-ring:focus::after {
+  @apply ring-2 ring-action-primary-default;
+}
+
+.Polaris-Button:not(.arrow-transition) .Polaris-Button__DisclosureIcon {
+  transition: 0ms;
+}
+
+.Polaris-Badge {
+  cursor: default;
+}
