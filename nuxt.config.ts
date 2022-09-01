@@ -1,9 +1,10 @@
 import { NuxtConfig } from '@nuxt/types'
-import {
-  addTransitioningDataAttr,
-  htmlAttrs,
-  removeTransitioningDataAttr,
-} from './utils'
+import { htmlAttrs } from './utils'
+
+const title = 'User testing platform for product teams'
+
+const description =
+  'Crowd empowers teams to make confident product, design and marketing decisions from instantly actionable user insights anytime, anywhere.'
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -14,8 +15,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s | Portal',
-    title: 'Loading...',
+    titleTemplate: '%s - Portal',
+    title,
     htmlAttrs: {
       lang: htmlAttrs.lang,
     },
@@ -25,8 +26,58 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Crowd' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: description,
+      },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'og-title',
+        content: `${title} - Crowd`,
+        property: 'og:title',
+      },
+      {
+        hid: 'og-type',
+        content: 'article',
+        property: 'og:type',
+      },
+      {
+        hid: 'og-image',
+        content:
+          'https://res.cloudinary.com/crowd-mvp/image/upload/v1661800625/static/png/thumbnail_zwizc69.png',
+        property: 'og:image',
+      },
+      {
+        hid: 'og-url',
+        content: 'https://crowdapp.io',
+        property: 'og:url',
+      },
+      {
+        hid: 'twitter-card',
+        content: 'summary_large_image',
+        name: 'twitter:card',
+      },
+      {
+        hid: 'og-description',
+        content: description,
+        property: 'og:description',
+      },
+      {
+        hid: 'og-site_name',
+        content: 'Crowd',
+        property: 'og:site_name',
+      },
+      {
+        hid: 'twitter-image-alt',
+        content: 'Make confident product decisions with user insights',
+        property: 'twitter:image:alt',
+      },
+      {
+        hid: 'twitter_site',
+        content: '@UseCrowdApp',
+        name: 'twitter:site',
+      },
     ],
     link: [
       {
@@ -68,10 +119,8 @@ export default {
   plugins: [
     '@/plugins/register-libraries',
     '@/plugins/register-components',
-    '@/plugins/autoLogin',
     '@/plugins/fullscreenLoading',
     '@/plugins/breakpoint',
-    '@plugins/alertDialog',
     '@/plugins/init',
   ],
 
@@ -94,8 +143,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-
-    'cookie-universal-nuxt',
   ],
 
   axios: {
@@ -143,7 +190,7 @@ export default {
   },
 
   router: {
-    middleware: [],
+    middleware: ['auth-page', 'settings-page', 'project', 'route-dialog'],
   },
 
   loading: '~/components/Base/LoadingBar',
@@ -157,6 +204,12 @@ export default {
 
   serverMiddleware: [],
 
+  env: {
+    CLOUDINARY_NAME: process.env.CLOUDINARY_NAME,
+    GOOGLE_OAUTH_REDIRECT_URL: process.env.GOOGLE_OAUTH_REDIRECT_URL,
+    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+  },
+
   typescript: {
     typeCheck: {
       eslint: {
@@ -167,12 +220,5 @@ export default {
 
   extends: ['@nuxtjs/eslint-config-typescript'],
 
-  transition: {
-    beforeEnter: addTransitioningDataAttr,
-    enter: addTransitioningDataAttr,
-    afterEnter: removeTransitioningDataAttr,
-    beforeLeave: addTransitioningDataAttr,
-    leave: addTransitioningDataAttr,
-    afterLeave: removeTransitioningDataAttr,
-  },
+  transition: {},
 } as unknown as NuxtConfig

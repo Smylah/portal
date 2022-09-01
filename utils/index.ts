@@ -1,15 +1,7 @@
 import { v4 } from 'uuid'
 import { nextTick } from '@vue/composition-api'
-import {
-  CancelEmailChange,
-  ChangeEmail,
-  // ConfirmAccount,
-  LogoutAllSessions,
-} from '../services/user'
 
 import type {
-  ApiAction,
-  ApiResponse,
   ProjectComponent,
   ProjectTypes,
   Duration,
@@ -603,78 +595,6 @@ export const formatByte = (bytes: number, fixed: number = 2): string => {
   }
 
   return `${(bytes / convertSize).toFixed(fixed)}${sizeType}`
-}
-
-export const actionRoutes: Record<
-  ApiAction,
-  {
-    request: (
-      this: Vue,
-      arg: { token: string; id?: string }
-    ) => Promise<ApiResponse<any>>
-    message: string
-    redirect: string
-  }
-> = {
-  end_all_sessions: {
-    async request(arg) {
-      const res = await LogoutAllSessions(this.$axios, {
-        token: arg.token,
-        id: arg.id as string,
-      })
-
-      if (!res.error) {
-        sleep(oneFrame).then(() => {
-          this.$user.logout()
-        })
-      }
-
-      return res
-    },
-    message: 'Ending all sessions...',
-    redirect: '/',
-  },
-  // confirm_account: {
-  //   async request(arg) {
-  //     const res = await ConfirmAccount(this.$axios, {
-  //       token: arg.token,
-  //     })
-
-  //     if (res.data) {
-  //       await this.$user.reload()
-  //     }
-
-  //     return res
-  //   },
-  //   message: 'Confirming account...',
-  //   redirect: '/',
-  // },
-  cancel_email_change: {
-    async request(arg) {
-      return await CancelEmailChange(this.$axios, {
-        token: arg.token,
-        id: arg.id as string,
-      })
-    },
-    message: 'Cancelling email change...',
-    redirect: '/',
-  },
-  change_email: {
-    async request(arg) {
-      const res = await ChangeEmail(this.$axios, {
-        token: arg.token,
-        id: arg.id as string,
-      })
-
-      if (res.data) {
-        await this.$user.reload()
-      }
-
-      return res
-    },
-    message: 'Changing email...',
-    redirect: '/',
-  },
 }
 
 export const confirmDeleteAccount = 'delete my account'

@@ -116,6 +116,9 @@ export default defineComponent({
   @apply !transition-[color,background-color,opacity,transform] !duration-[250ms] active:opacity-80 active:scale-[0.99] md:active:scale-[0.992];
   transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
   appearance: none;
+}
+
+.BaseButton:not(.raised) {
   box-shadow: none !important;
 }
 

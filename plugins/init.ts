@@ -34,7 +34,7 @@ const init: Plugin = function (
                 getAlphabetIndex(qNumber.replace(/\d+/, ''))
               ] || {}
 
-            return `${followUpQuestion.title || 'Loading...'}`
+            return `${followUpQuestion.title || 'Answer test'}`
           }
 
           return undefined

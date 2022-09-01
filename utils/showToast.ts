@@ -1,16 +1,12 @@
 import { nextFrame, sleep, uid } from '.'
-import { MessageObject } from '~/server-middleware/types'
 
 /**
  * @name showToasts
  * @description
  * Shows messages from API as toasts in batches. Since message response is an array, show a toast for each of them with an offset, if they all come at once
- * @param {MessageObject[]} messages
+ * @param {any[]} messages
  * **/
-export async function showToasts(
-  $pToast: Vue['$pToast'],
-  messages?: MessageObject[]
-) {
+export async function showToasts($pToast: Vue['$pToast'], messages?: any[]) {
   if (!messages) {
     return Promise.resolve()
   }
@@ -21,7 +17,7 @@ export async function showToasts(
     const { content, type, duration } = messages[i]
 
     await nextFrame()
-    
+
     await sleep(delay)
 
     $pToast.open({

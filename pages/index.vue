@@ -1,35 +1,23 @@
 <script lang="ts">
-import { computed, defineComponent } from '@vue/composition-api'
-import LandingPageMarkup from '@/components/LandingPage/IndexPage/index.vue'
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { LandingPageMarkup },
-  layout: 'landing-page',
+  components: {},
+  // edit layout!
+  // layout: 'landing-page',
   transition: 'page-transition-slide-left',
-  setup(_, { root: { $user } }) {
-    const loggedIn = computed(() => $user.loggedIn)
-
-    return { loggedIn }
-  },
+  setup() {},
 
   head: () => ({
-    titleTemplate: 'Crowd | User testing platform for product teams',
+    titleTemplate: '',
     title: '',
   }),
 })
 </script>
 
 <template>
-  <LandingPageMarkup />
+  <div>Hello world</div>
 </template>
 
-<style lang="postcss">
-.landing-page-title {
-  @apply font-semibold text-[24px] md:text-[32px] leading-[28px] md:leading-[52.5px] text-center font-sf-pro-display;
-}
-
-.landing-page-subtitle {
-  @apply text-[16px] md:text-[20px] leading-[28px] md:max-w-[550px] text-center mx-auto font-sf-pro-display;
-}
-</style>
+<style lang="postcss"></style>
