@@ -4,33 +4,28 @@ import layouts from '~/mixins/layouts'
 import Sidebar from '../components/Sidebar/Sidebar.vue'
 
 export default defineComponent({
-    name: 'Home',
+    name: 'TalentLayout',
 
     components: {Sidebar},
     mixins: [layouts],
-    layout: "talent",
+
     props: {
     },
 
     setup(_props) {},
 
-    head() {
-        return {
-            title: 'Home',
-            meta: [
-                {
-                    hid: '',
-                    name: '',
-                    content: '',
-                },
-            ],
-        }
-    },
 })
 </script>
 
 <template>
     <div>
-        Talent Layout Page
+        <Sidebar />
+        <div>
+            <nuxt-link to="/" > Home Page </nuxt-link>
+            <nuxt-link to="/home" > Talent Page </nuxt-link>
+            <nuxt-link to="/settings" > Settings Page </nuxt-link>
+            <nuxt-link to="/gigs" > Gigs Page </nuxt-link>
+        </div>
+        <NuxtChild />
     </div>
 </template>

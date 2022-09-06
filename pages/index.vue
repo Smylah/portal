@@ -4,8 +4,7 @@ import { defineComponent } from '@vue/composition-api'
 export default defineComponent({
   name: 'IndexPage',
   components: {},
-  // edit layout!
-  // layout: 'landing-page',
+  layout: 'talent',
   transition: 'page-transition-slide-left',
   setup() {},
 

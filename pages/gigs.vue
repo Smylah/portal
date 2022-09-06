@@ -1,12 +1,11 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import layouts from '~/mixins/layouts'
-import Sidebar from '../components/Sidebar/Sidebar.vue'
 
 export default defineComponent({
-    name: 'Home',
+    name: 'GigsPage',
 
-    components: {Sidebar},
+    components: {},
     mixins: [layouts],
     layout: "talent",
     props: {
@@ -31,6 +30,6 @@ export default defineComponent({
 
 <template>
     <div>
-        Talent Layout Page
+        Gigs Layout Page
     </div>
 </template>

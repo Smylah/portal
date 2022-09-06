@@ -190,7 +190,7 @@ export default {
   },
 
   router: {
-    middleware: ['auth-page', 'settings-page', 'project', 'route-dialog'],
+    middleware: [],
   },
 
   loading: '~/components/Base/LoadingBar',

@@ -1,14 +1,13 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 import layouts from '~/mixins/layouts'
-import Sidebar from '../components/Sidebar/Sidebar.vue'
 
 export default defineComponent({
-    name: 'DefaultLayout',
+    name: 'SettingsPage',
 
-    components: {Sidebar},
+    components: {},
     mixins: [layouts],
-
+    layout: "",
     props: {
     },
 
@@ -30,8 +29,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
-        <Sidebar />
-        <NuxtChild />
+    <div class="bg-black">
+        Settings Layout Page
     </div>
 </template>
