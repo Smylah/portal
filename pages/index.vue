@@ -2,7 +2,7 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
-  name: 'IndexPage',
+  name: 'HomePage',
   components: {},
   layout: 'talent',
   transition: 'page-transition-slide-left',
@@ -16,7 +16,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>Hello world</div>
+  <div>Home Page</div>
 </template>
 
 <style lang="postcss"></style>

@@ -18,14 +18,8 @@ export default defineComponent({
 </script>
 
 <template>
-    <div>
+    <div class="flex">
         <Sidebar />
-        <div>
-            <nuxt-link to="/" > Home Page </nuxt-link>
-            <nuxt-link to="/home" > Talent Page </nuxt-link>
-            <nuxt-link to="/settings" > Settings Page </nuxt-link>
-            <nuxt-link to="/gigs" > Gigs Page </nuxt-link>
-        </div>
         <NuxtChild />
     </div>
 </template>
