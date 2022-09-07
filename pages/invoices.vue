@@ -3,7 +3,7 @@ import { defineComponent } from '@vue/composition-api'
 import layouts from '~/mixins/layouts'
 
 export default defineComponent({
-    name: 'SettingsPage',
+    name: 'InvoicesPage',
 
     components: {},
     mixins: [layouts],
@@ -15,7 +15,7 @@ export default defineComponent({
 
     head() {
         return {
-            title: 'Home',
+            title: 'Invoices',
             meta: [
                 {
                     hid: '',
@@ -29,7 +29,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="">
-        Settings Layout Page
+    <div>
+        Invoices Layout Page
     </div>
 </template>

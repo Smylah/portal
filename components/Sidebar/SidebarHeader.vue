@@ -30,7 +30,7 @@ export default defineComponent({
     <div class="">
         <div class="flex justify-between items-center">
             <div class="flex items-center space-x-[11px]">
-                <div class="w-[32px] h-[32px] rounded-[6px] bg-base-primary"></div>
+                <div class="w-[2.5rem] h-[2.5rem] rounded-[6px] bg-base-primary"></div>
                 <h2 class="font-semibold text-[16px]">UnbugQa</h2>
             </div>
             <div class="flex items-center space-x-[20px]">
@@ -41,7 +41,7 @@ export default defineComponent({
         </div>
 
         <div class="py-[13px] my-[24px] border-2 border-black">
-            <div class="flex space-x-[4px] flex items-center">
+            <div class="flex space-x-[4px] items-center">
                 <h2 class="font-semibold text-[16px]">John Dalton</h2>
                 <h2 class="flex items-center font-medium text-[12px] text-[#0063F7] bg-[#F5F5FF] px-[8px] rounded-[24px] h-[20px]">Client</h2>
             </div>

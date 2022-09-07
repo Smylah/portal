@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="flex flex-col w-[280px] h-[100vh] bg-white px-[1.25rem] pt-[2rem] border-2 border-black">
+    <div class="flex flex-col w-[20rem] h-[100vh] bg-white px-[2rem] pt-[2.5rem]">
         <SidebarHeader />
         <SidebarLinks />
     </div>

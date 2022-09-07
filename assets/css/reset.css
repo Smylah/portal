@@ -20,6 +20,10 @@
   }
 }
 
+html {
+  font-size: 1rem;
+}
+
 hr {
   pointer-events: none;
   @apply border-divider;

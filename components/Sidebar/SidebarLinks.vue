@@ -67,7 +67,7 @@ export default defineComponent({
 <template>
     <div class="py-[28px]">
         <div v-for="(link, index) in links" v-bind:key="index" class="">
-            <NuxtLink to="link.route" class="flex items-center space-x-[10.5px] px-[12px] bg-[#E9F2FF] w-[100%] h-[36px] rounded-[6px] text-[#0063F7] cursor-pointer mb-[4px]">
+            <NuxtLink :to="link.route" class="flex items-center space-x-[10.5px] px-[12px] bg-[#E9F2FF] w-[100%] h-[36px] rounded-[6px] text-[#0063F7] cursor-pointer mb-[4px]">
                 <div class="h-[15px] w-[15px] bg-black"></div>
                 <p class="font-medium text-[14px]">{{link.name}}</p>
             </NuxtLink>
