@@ -48,19 +48,6 @@ export default defineComponent({
             links
         }
     },
-
-    head() {
-        return {
-            title: '',
-            meta: [
-                {
-                    hid: '',
-                    name: '',
-                    content: '',
-                },
-            ],
-        }
-    },
 })
 </script>
 
