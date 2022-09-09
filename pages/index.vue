@@ -1,10 +1,11 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import HomeHeader from "../components/Home/HomeHeader.vue"
+import HomeHeader from "../components/HomePage/HomeHeader.vue"
+import HomeBody from "../components/HomePage/HomeBody.vue"
 
 export default defineComponent({
   name: 'HomePage',
-  components: {HomeHeader},
+  components: {HomeHeader, HomeBody},
   layout: 'talent',
   transition: 'page-transition-slide-left',
   setup() {},
@@ -17,9 +18,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="px-[4.5rem] py-[2.5rem]">
+  <div class="">
     <HomeHeader />
-    
+    <HomeBody />
   </div>
 </template>
 

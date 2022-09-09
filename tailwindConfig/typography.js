@@ -22,6 +22,7 @@ module.exports = {
         epilogue: ['Epilogue', 'sans-serif'],
         mono: ['monospace'],
         mulish: ['Mulish', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
     },
     fontSize: {
         'display-x-large': [

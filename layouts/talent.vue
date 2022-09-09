@@ -18,8 +18,10 @@ export default defineComponent({
 </script>
 
 <template>
-    <div class="flex">
+    <div class="flex bg-[#F5F5F5] w-[100vw]">
         <Sidebar />
-        <NuxtChild />
+        <div class="grow">
+            <NuxtChild />
+        </div>
     </div>
 </template>
