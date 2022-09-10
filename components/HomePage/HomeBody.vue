@@ -16,7 +16,7 @@
     
 <template>
     <div class="mt-[1.65rem] px-[4.5rem]">
-        <div class="flex justify-between">
+        <div class="flex space-x-[2.5rem]">
             <div class="w-[22.5rem] p-[1.75rem] bg-[#808080] rounded-[8px] shadow-[0_1px_2px_-1px_rgba(16, 24, 40, 0.1)] drop-shadow-[0_1px_3px_rgba(16, 24, 40, 0.1)]">
                 <p class="text-[#FFFFFF] text-[1rem] leading-[1.4rem] font-normal mb-[6px]">Wallet balance</p>
                 <div class="flex justify-between items-center mb-[16px]">
@@ -32,6 +32,19 @@
                 <HomeCard :count="0" text="Gigs created"/>
                 <HomeCard :count="0" text="Talents hired"/>
                 <HomeCard :count="0" text="Invoices due"/>
+            </div>
+        </div>
+        <div class="mt-[2.5rem] flex space-x-[1.25rem]">
+            <div class="p-[1.4rem] w-[34.8rem] h-[25rem] bg-[#FFFFFF] rounded-[8px] shadow-[0_1px_2px_rgba(16, 24, 40, 0.05)]">
+                <p class="text-[#000000] text-[1rem] leading-[1.4rem] font-semibold">Recent Gigs</p>
+            </div>
+            <div class="flex flex-col space-y-[1.25rem]">
+                <div class="p-[1.4rem] w-[34.8rem] h-[14.3rem] bg-[#FFFFFF] rounded-[8px] shadow-[0_1px_2px_rgba(16, 24, 40, 0.05)]">
+                    <p class="text-[#000000] text-[1rem] leading-[1.4rem] font-semibold">Payment history</p>
+                </div>
+                <div class="p-[1.4rem] w-[34.8rem] h-[9.5rem] bg-[#FFFFFF] rounded-[8px] shadow-[0_1px_2px_rgba(16, 24, 40, 0.05)]">
+                    <p class="text-[#000000] text-[1rem] leading-[1.4rem] font-semibold">Perks and rewards for you!</p>
+                </div>
             </div>
         </div>
     </div>

@@ -24,10 +24,10 @@
 </script>
     
 <template>
-    <NuxtLink class="flex justify-between items-center bg-white pl-[1.35rem] py-[1.2rem] pr-[1.65rem]" :to="TaskLink">
-        <div class="flex items-center">
+    <NuxtLink class="flex justify-between items-center bg-white pl-[1.35rem] py-[1.2rem] pr-[1.65rem] rounded-[8px] w-[34rem]" :to="TaskLink">
+        <div class="flex items-center"> 
             <div class="bg-black w-[14px] h-[14px] rounded-full"></div>
-            <p>{{TaskName}}</p>
+            <p class="text-[1.2rem] leading-[1.75rem] font-medium text-[#111827] pl-[1.4rem]">{{TaskName}}</p>
         </div>
         <div class="bg-black w-[14px] h-[11px]"></div>
     </NuxtLink>

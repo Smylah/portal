@@ -37,7 +37,7 @@ export default defineComponent({
             <p class="font-normal text-[1rem] text-[#6B7280]">John2022@gmail.com</p>
         </div>
 
-        <NuxtLink to="/complete-setup/" class="flex justify-between items-center px-[0.9rem] bg-[#FFFBEB] w-[100%] h-[2.5rem] rounded-[6px] text-[#111827]">
+        <NuxtLink to="/complete-setup/" class="flex justify-between items-center px-[0.9rem] bg-[#FFFBEB] w-[100%] h-[2.5rem] rounded-[6px] text-[#111827] border-[1px] border-[#F59E0B]">
             <p class="font-medium text-[14px]">Complete account setup</p>
             <div class="w-[14px] h-[10.89px] bg-black"></div>
         </NuxtLink>
