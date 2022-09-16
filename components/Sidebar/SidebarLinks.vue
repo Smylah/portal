@@ -71,7 +71,7 @@ export default defineComponent({
                 <SidebarInvoicesIcon v-if="link.name==='Invoices'"/>
                 <SidebarSettingsIcon v-if="link.name==='Settings'"/>
                 <SidebarPersAndRewardsIcon v-if="link.name==='Perks and Rewards'"/>
-                <p class="font-medium text-[14px]">{{link.name}}</p>
+                <p class="font-medium text-[1rem] leading-[1.4rem]">{{link.name}}</p>
             </NuxtLink>
         </div>
     </div>

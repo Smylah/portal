@@ -24,7 +24,7 @@
         </div>
         <div class="mt-[2.25rem]">
             <p class="text-[#DC2626] mb-[0.8rem] text-[1rem] leading-[1.75rem] uppercase font-semibold">required for creating your first gig</p>
-            <TaskLink TaskLink="/" TaskName="Complete your company profile" />
+            <TaskLink TaskLink="/complete-setup/complete-company-profile" TaskName="Complete your company profile" />
         </div>
         <div class="mt-[1.755rem]">
             <p class="text-[#6B7280] mb-[0.8rem] text-[1rem] leading-[1.75rem] uppercase font-semibold">get started</p>

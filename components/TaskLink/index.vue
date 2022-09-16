@@ -25,7 +25,10 @@
 </script>
     
 <template>
-    <NuxtLink class="flex justify-between items-center bg-white pl-[1.35rem] py-[1.2rem] pr-[1.65rem] rounded-[8px] w-[34rem]" :to="TaskLink">
+    <NuxtLink 
+        class="flex justify-between items-center bg-white pl-[1.35rem] py-[1.2rem] pr-[1.65rem] rounded-[8px] w-[34rem]"
+        :to="TaskLink"
+    >
         <div class="flex items-center"> 
             <CompleteCheckMarkIcon />
             <p class="text-[1.2rem] leading-[1.75rem] font-medium text-[#111827] pl-[1.4rem]">{{TaskName}}</p>
