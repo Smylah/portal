@@ -13,7 +13,7 @@
 </script> 
     
 <template>
-    <div class="flex flex-col items-center border-2 border-black w-[27.5rem] px-[1.75rem] mx-auto">
+    <div class="flex flex-col items-center w-[27.5rem] px-[1.75rem] mx-auto">
         <ProfileHeader level="1"/>
         <ProfileBody />
     </div>

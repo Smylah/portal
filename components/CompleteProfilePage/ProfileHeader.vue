@@ -31,8 +31,12 @@
             </div>
             <!-- text elements in their divs -->
             <div>
-                <p class="uppercase text-[1rem] leading-[1.4rem] text-[#6B7280] font-semibold">Tell us about your Company</p>
-                <h2 class="text-[1.2rem] leading-[1.65rem] text-[#111827]">Company Details</h2>
+                <p class="uppercase text-[1rem] leading-[1.4rem] text-[#6B7280] font-semibold">
+                    Tell us about your Company
+                </p>
+                <h2 class="text-[1.2rem] leading-[1.65rem] text-[#111827]">
+                    Company details
+                </h2>
             </div>
         </div>
     </div>
