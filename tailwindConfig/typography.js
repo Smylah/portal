@@ -1,25 +1,7 @@
 module.exports = {
     fontFamily: {
-        'sf-pro-text': [
-            'SF Pro Text',
-            '-apple-system',
-            'BlinkMacSystemFont',
-            'San Francisco',
-            'Segoe UI',
-            'Helvetica Neue',
-            'sans-serif',
-        ],
-        'sf-pro-display': [
-            'SF Pro Display',
-            '-apple-system',
-            'BlinkMacSystemFont',
-            'San Francisco',
-            'Segoe UI',
-            'Helvetica Neue',
-            'sans-serif',
-        ],
-        roboto: ['roboto', 'sans-serif'],
-        epilogue: ['Epilogue', 'sans-serif'],
+        // roboto: ['roboto', 'sans-serif'],
+        // epilogue: ['Epilogue', 'sans-serif'],
         mono: ['monospace'],
         mulish: ['Mulish', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],

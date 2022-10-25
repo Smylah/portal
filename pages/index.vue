@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, onMounted } from '@vue/composition-api'
 import HomeHeader from "../components/HomePage/HomeHeader.vue"
 import HomeBody from "../components/HomePage/HomeBody.vue"
 
@@ -8,7 +8,20 @@ export default defineComponent({
   components: {HomeHeader, HomeBody},
   layout: 'talent',
   transition: 'page-transition-slide-left',
-  setup() {},
+
+  setup(_props, {root}) {
+    // onMounted( ()=> {
+    //   console.log(root.$route.path)
+    // })
+
+    const tryout1 = ()=> {
+      console.log("fired")
+    }
+    
+    return {
+      tryout1
+    }
+  },
 
   head: () => ({
     titleTemplate: '',
@@ -18,7 +31,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="">
+  <div class="" @click="tryout1">
     <HomeHeader />
     <HomeBody />
   </div>

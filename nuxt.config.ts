@@ -96,10 +96,15 @@ export default {
         href: 'https://fonts.gstatic.com',
         crossorigin: '',
       },
+      // {
+      //   rel: 'stylesheet',
+      //   hid: 'google-roboto-and-epilogue-font',
+      //   href: 'https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Roboto&display=swap&family=Mulish&display=swap',
+      // },
       {
         rel: 'stylesheet',
-        hid: 'google-roboto-and-epilogue-font',
-        href: 'https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Roboto&display=swap&family=Mulish&display=swap',
+        hid: 'google-inter',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&display=swap',
       },
     ],
   },

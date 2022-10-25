@@ -1,16 +1,29 @@
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, onMounted } from '@vue/composition-api'
 import RightArrowIcon from '../Base/Icon/RightArrowIcon.vue'
+import UnbugQaIcon from '../Base/Icon/UnbugQaIcon.vue'
 
 export default defineComponent({
     name: 'SidebarHeader',
 
-    components: {RightArrowIcon},
+    components: {RightArrowIcon, UnbugQaIcon},
 
     props: {
     },
 
-    setup(_props) {},
+    setup(_props, {root}) {
+        // onMounted( ()=> {
+        //     console.log(root.$route.path)
+        // })
+
+        const currentRoute = root.$route.path
+
+        console.log(currentRoute)
+
+        return {
+            currentRoute
+        }
+    },
 })
 </script>
 
@@ -19,7 +32,7 @@ export default defineComponent({
         <div class="flex justify-between items-center">
             <h1 class="">
                 <NuxtLink to="/" class="flex items-center space-x-[0.75rem]">
-                    <div class="w-[2.5rem] h-[2.5rem] rounded-[6px] bg-base-primary"></div>
+                    <UnbugQaIcon />
                     <h2 class="font-semibold text-[1.25rem]">UnbugQa</h2>
                 </NuxtLink>
             </h1>
@@ -45,7 +58,10 @@ export default defineComponent({
             <p class="font-normal text-[1rem] text-[#6B7280]">John2022@gmail.com</p>
         </div>
 
-        <NuxtLink to="/complete-setup/" class="flex justify-between items-center px-[0.9rem] bg-[#FFFBEB] w-[100%] h-[2.5rem] rounded-[6px] text-[#111827] border-[1px] border-[#F59E0B]">
+        <NuxtLink to="/complete-setup/"
+            class="flex justify-between items-center px-[0.9rem] bg-[#FFFBEB] w-[100%] h-[2.5rem] rounded-[6px] text-[#111827]"
+            :class="{ 'border-[#F59E0B] border-[1px]' : currentRoute === '/complete-setup/'}"
+        >
             <p class="font-medium text-[14px]">Complete account setup</p>
             <RightArrowIcon />
         </NuxtLink>

@@ -22,7 +22,7 @@ export default defineComponent({
     props: {
     },
 
-    setup(_props) {
+    setup(_props, {root}) {
         const links = [
             {
                 name: "Home",
@@ -50,9 +50,11 @@ export default defineComponent({
             }
         ]
         
+        const currentRoute = root.$route.path
+
         // expose to template and other options API hooks
         return {
-            links
+            links, currentRoute
         }
         
     },
@@ -63,8 +65,9 @@ export default defineComponent({
     <div class="py-[28px]">
         <div v-for="(link, index) in links" v-bind:key="index" class="">
             <NuxtLink :to="link.route"
-                class="flex items-center space-x-[10.5px] px-[12px] bg-[#E9F2FF] w-[100%] h-[36px] rounded-[6px] text-[#0063F7] cursor-pointer mb-[4px]
-            ">
+                class="flex items-center space-x-[10.5px] px-[12px] w-[100%] h-[36px] rounded-[6px] text-[#0063F7] cursor-pointer mb-[4px]"
+                :class="{ 'bg-[#E9F2FF]' : isActive, 'bg-none' : isNotActive }"
+            >
                 <SidebarHomeIcon v-if="link.name==='Home'" :stroke="'#267DFF'"/>
                 <SidebarGigsIcon v-if="link.name==='Gigs'"/>
                 <SidebarYourHiresIcon v-if="link.name==='Your Hires'"/>
