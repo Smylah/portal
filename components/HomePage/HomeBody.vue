@@ -8,9 +8,18 @@ import CompleteCheckMarkIcon from '../Base/Icon/CompleteCheckMarkIcon.vue'
 import SkipDash from '../Base/Icon/SkipDash.vue'
 import CurlyArrow1 from '../Base/Icon/CurlyArrow1.vue'
 import CurlyArrow2 from '../Base/Icon/CurlyArrow2.vue'
+import ArrowLeft from '../Base/Icon/ArrowLeft.vue'
+import ArrowRight from '../Base/Icon/ArrowRight.vue'
 
 export default defineComponent({
-  components: { CompleteCheckMarkIcon, SkipDash, CurlyArrow1, CurlyArrow2 },
+  components: {
+    CompleteCheckMarkIcon,
+    SkipDash,
+    CurlyArrow1,
+    CurlyArrow2,
+    ArrowLeft,
+    ArrowRight,
+  },
   name: 'HomeBody',
   data() {
     return {
@@ -387,6 +396,28 @@ export default defineComponent({
       </div>
     </section>
 
+    <section
+      class="bg-neutral50 py-64 flex flex-row justify-center mb-51 space-x-32 items-center rounded-lg"
+    >
+      <button class="round-button"><ArrowLeft /></button>
+      <div class="bg-white py-24 space-y-32 w-3/6 px-28 text-center">
+        <img
+          src="../../assets/png/Company-Placeholder.png"
+          alt="logo"
+          class="items-center"
+        />
+        <h4 class="font-normal italic">
+          “At Designership, they ship truly brilliant products! It’s easy to use
+          and scale, and is really handy to customise for any projects.”
+        </h4>
+        <div class="">
+          <p class="font-medium">Loki Bright</p>
+          <p class="text-neutral500">Chief Executive Officer</p>
+        </div>
+      </div>
+      <button class="round-button"><ArrowRight /></button>
+    </section>
+
     <section class="container mx-auto">
       <main class="rounded-xl container flex flex-row bg-primary50 px-60">
         <div class="my-60">
@@ -422,5 +453,8 @@ export default defineComponent({
 <style scoped>
 .curly-arrow {
   @apply mt-146;
+}
+.round-button {
+  @apply bg-white p-16 rounded-full hover:bg-neutral300 hover:transition-all;
 }
 </style>
