@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: 'inter', 'san-serif';
+}
+
+h1{
+
+}
+
+h2{/* 30px */ @apply text-3xl}
+
+h3{/* 24px 600 */ @apply text-2xl font-semibold}
+
+h4{ /* 18px */ @apply text-lg}
+
+h5{/* 16px 400 */ @apply text-base font-normal}
+
+.bold-500{/*500*/ @apply font-medium}
+
+h6{/* 12px 500 */@apply text-xs font-medium}
+
+p{/* 14px 400 */ @apply text-sm font-normal}
+
+
+/* form */
+.nuxt-link {
+    @apply text-primary500;
+  }
+.smallcontainer {
+   max-width: 480px;
+  }
+form {
+    @apply space-y-14 flex flex-col;
+  }
+select, input, textarea {
+    @apply border-n-300 rounded-md px-12 py-10 box-border container text-sm text-black;
+  }
+select:focus, textarea:focus, input:focus  {
+    outline: none;
+  }
+textarea::placeholder, input::placeholder  {
+    @apply text-neutral400 ;
+  }
+textarea{
+    @apply h-98
+  }
+label {
+    @apply text-sm font-medium;
+  }
+select:required:invalid {
+    @apply text-neutral400;
+  }
+option[value=''][disabled] {
+    display: none;
+  }
+option {
+    @apply text-black;
+  }
+.blue-button {
+    @apply bg-primary600 rounded-md py-8 px-16 text-base text-white font-medium;
+  }
+.skyeblue-button {
+    @apply bg-primary50 rounded-md py-8 px-16 text-base text-primary600 font-medium;
+  }
+
+
+/* container */
+.small-container {
+    @apply mx-auto flex flex-col space-y-16 items-center;
+    max-width: 592px;
+  }
+
+/* border */
+.border-n-300{
+  @apply border border-solid border-neutral300
+}
+.black-border{
+  @apply border border-solid border-black
+}
+
+/* transition */
+.transit {
+  @apply transition duration-1000 ease-in-out
+}

@@ -1,40 +1,29 @@
 <script lang="ts">
-import { defineComponent, onMounted } from '@vue/composition-api'
-import HomeHeader from "../components/HomePage/HomeHeader.vue"
-import HomeBody from "../components/HomePage/HomeBody.vue"
+import { defineComponent } from '@vue/composition-api'
+import Header from '../components/HomePage/Header.vue'
+import HomeBody from '../components/HomePage/HomeBody.vue'
+import Footer from '../components/Footer/index.vue'
 
 export default defineComponent({
   name: 'HomePage',
-  components: {HomeHeader, HomeBody},
-  layout: 'talent',
+  components: { Header, HomeBody, Footer },
   transition: 'page-transition-slide-left',
 
-  setup(_props, {root}) {
-    // onMounted( ()=> {
-    //   console.log(root.$route.path)
-    // })
+  data() {},
 
-    const tryout1 = ()=> {
-      console.log("fired")
-    }
-    
+  head() {
     return {
-      tryout1
+      title: 'UnbugQA Portal',
+      meta: [{ hid: 'Homepage', name: 'Homepage', content: 'Homepage' }],
     }
   },
-
-  head: () => ({
-    titleTemplate: '',
-    title: '',
-  }),
 })
 </script>
 
 <template>
-  <div class="" @click="tryout1">
-    <HomeHeader />
+  <div>
+    <Header />
     <HomeBody />
+    <Footer />
   </div>
 </template>
-
-<style lang="postcss"></style>
