@@ -25,30 +25,31 @@ export default defineComponent({
 <template>
   <header>
     <nav
-      class="container mx-auto my-24 flex justify-between text-lg font-medium"
+      class="container mx-auto my-24 flex justify-between text-sm font-medium"
     >
-      <div class="flex space-x-24 items-center">
+      <div class="flex justify-between items-center w-[100%]">
         <unbug-qa-icon />
 
         <div v-show="homepage" class="flex flex-row space-x-24">
           <nuxt-link to="link">For employers</nuxt-link>
           <nuxt-link to="link">For QA engineers</nuxt-link>
-          <nuxt-link to="link">Company</nuxt-link>
-          <nuxt-link to="link">Pricing</nuxt-link>
           <nuxt-link to="link" class="flex items-center"
-            >Resources <dropdown-icon class="ml-10" />
+            >Company <dropdown-icon class="ml-5" />
+          </nuxt-link>
+          <nuxt-link to="link">Academy</nuxt-link>
+        </div>
+
+        <div v-show="homepage" class="space-x-24">
+          <nuxt-link to="/login" class="text-primary600">
+            Join Talent Pool</nuxt-link
+          >
+          <nuxt-link
+            to="/SignUp"
+            class="bg-primary500 text-white px-20 py-8 rounded-md"
+          >
+            Hire a QA Engineer
           </nuxt-link>
         </div>
-      </div>
-
-      <div v-show="homepage" class="space-x-24">
-        <nuxt-link to="/login" class="text-primary600"> Login</nuxt-link>
-        <nuxt-link
-          to="/SignUp"
-          class="bg-primary500 text-white px-20 py-8 rounded-md"
-        >
-          Get started
-        </nuxt-link>
       </div>
     </nav>
   </header>

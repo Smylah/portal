@@ -209,8 +209,6 @@ export default defineComponent({
 
     <!-- talent portfolio -->
     <section class="my-64 mx-31 flex flex-row space-x-18 relative">
-      <div class="absolute inset-0 bg-gradient-to-r from-white w-500" />
-      <div class="absolute bg-gradient-to-l from-white w-300" />
       <div
         v-for="talent in talentPortfolio"
         :key="talent.id"
@@ -397,15 +395,13 @@ export default defineComponent({
     </section>
 
     <section
-      class="bg-neutral50 py-64 flex flex-row justify-center mb-51 space-x-32 items-center rounded-lg"
+      class="bg-neutral50 py-64 flex justify-center mb-51 space-x-32 items-center rounded-lg"
     >
       <button class="round-button"><ArrowLeft /></button>
-      <div class="bg-white py-24 space-y-32 w-3/6 px-28 text-center">
-        <img
-          src="../../assets/png/Company-Placeholder.png"
-          alt="logo"
-          class="items-center"
-        />
+      <div
+        class="bg-white py-24 space-y-32 w-3/6 px-28 flex flex-col justify-center items-center text-center"
+      >
+        <img src="../../assets/png/Company-Placeholder.png" alt="logo" />
         <h4 class="font-normal italic">
           “At Designership, they ship truly brilliant products! It’s easy to use
           and scale, and is really handy to customise for any projects.”
