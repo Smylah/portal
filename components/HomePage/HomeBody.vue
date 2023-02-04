@@ -30,7 +30,7 @@ export default defineComponent({
           name: 'Josh Emerson',
           img: '../../assets/png/21.png',
           experience: '5 years experience',
-          location: <location>{ state: 'Lagos', country: 'Nigeria' },
+          location: { state: 'Lagos', country: 'Nigeria' } as location,
           skills: [
             { id: 1, name: 'cypress' },
             { id: 2, name: 'Apium' },
@@ -44,7 +44,7 @@ export default defineComponent({
           name: 'Sonia Balogun',
           img: '../../assets/png/21.png',
           experience: '7 years experience',
-          location: <location>{ state: 'Paris', country: 'France' },
+          location: { state: 'Paris', country: 'France' } as location,
           skills: [
             { id: 1, name: 'Apium' },
             { id: 2, name: 'cypress' },
@@ -58,7 +58,7 @@ export default defineComponent({
           name: 'Lily Jefferson',
           img: '../../assets/png/Lily.png',
           experience: '12 years experience',
-          location: <location>{ state: 'NY', country: 'United States' },
+          location: { state: 'NY', country: 'United States' } as location,
           skills: [
             { id: 1, name: 'Pytest' },
             { id: 2, name: 'Apium' },
