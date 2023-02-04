@@ -15,3 +15,9 @@
     />
   </svg>
 </template>
+<script lang="ts">
+export default {
+  name: 'MessagingIcon',
+  setup() {},
+}
+</script>
