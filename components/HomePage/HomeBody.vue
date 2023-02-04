@@ -1,15 +1,15 @@
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import { location, talentportfolio } from './TalentPortfolio'
-import { skip } from './skip'
-import { featuredtalent } from './featuredtalent'
-import { others } from './others'
+// import { skip } from './skip'
 import CompleteCheckMarkIcon from '../Base/Icon/CompleteCheckMarkIcon.vue'
 import SkipDash from '../Base/Icon/SkipDash.vue'
 import CurlyArrow1 from '../Base/Icon/CurlyArrow1.vue'
 import CurlyArrow2 from '../Base/Icon/CurlyArrow2.vue'
 import ArrowLeft from '../Base/Icon/ArrowLeft.vue'
 import ArrowRight from '../Base/Icon/ArrowRight.vue'
+import { featuredtalent } from './featuredtalent'
+import { others } from './others'
+import { location, talentportfolio } from './TalentPortfolio'
 
 export default defineComponent({
   components: {
